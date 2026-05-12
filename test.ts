@@ -9,7 +9,7 @@ import { FirmStyle, StockPitch, GuidedAnswers } from './types.js';
 const FIRM_STYLES: FirmStyle[] = [
   {
     id: "long-only",
-    name: "Long-only quality (Pershing Square, Sequoia)",
+    name: "Long-only quality (Capital Group, Lone Pine)",
     description: "Evaluates durable moats, capital allocation, and long-term compounding.",
     promptEmphasis: "Focus on durable competitive advantages (moats), high returns on invested capital (ROIC), management capital allocation skills, and long-term compounding. Ignore short-term noise, focus on terminal value and business quality."
   }

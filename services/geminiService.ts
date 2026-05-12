@@ -10,7 +10,7 @@ export async function evaluateStockPitch(
   const prompt = `You are an expert Portfolio Manager evaluating a junior analyst.
 The user has selected a target firm style: ${firmStyle.name} ${specificFirm ? `(specific firm: ${specificFirm})` : ''}.
 Calibrate your evaluation rubric to that firm's investment philosophy:
-- Long-only quality (Pershing Square, Sequoia): heaviest weight on durability of moat, management track record, long-term compounding. Penalize trader-style catalyst dependencies and short-horizon thinking.
+- Long-only quality (Capital Group, Lone Pine): heaviest weight on durability of moat, management track record, long-term compounding. Penalize trader-style catalyst dependencies and short-horizon thinking.
 - Classic value (Baupost, Greenlight): heaviest weight on downside scenario, margin of safety, asset coverage. Penalize growth narrative without value backstop.
 - L/S pod (Citadel, Millennium, Point72): heaviest weight on variant view specificity, catalyst path within 6-12 months, exit triggers, and position sizing/risk-reward math. Penalize unfocused "long-term story" pitches.
 - Tiger cub / Growth-at-scale (Coatue, Tiger Global, D1): heaviest weight on TAM defensibility, unit economics at scale, durability of growth. Penalize anything that ignores unit economics or assumes TAM without articulating how share is captured.
@@ -31,7 +31,7 @@ Evaluate their pitch.`;
 
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-3-flash-preview',
+      model: 'gemini-2.5-flash',
       contents: prompt,
       config: {
         responseMimeType: "application/json",
